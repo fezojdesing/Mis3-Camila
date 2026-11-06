@@ -28,8 +28,13 @@
     /* Coordenadas relativas a cada página: conservan intacta la composición del PDF. */
     .open-hit{left:27%;top:76.5%;width:46%;height:4.4%}
     .logo-cover-hit{left:36%;top:87.0%;width:28%;height:4.2%}
-    .map-ceremony-hit{left:31%;top:52.8%;width:38%;height:2.2%}
-    .map-reception-hit{left:31%;top:65.1%;width:38%;height:2.2%}
+    .map-button{position:absolute;z-index:5;left:50%;transform:translateX(-50%);width:39%;min-height:34px;padding:7px 12px;display:flex;align-items:center;justify-content:center;gap:7px;border:1px solid #e5ca83;border-radius:999px;background:linear-gradient(135deg,rgba(255,244,211,.96),rgba(210,174,91,.96));color:#49321d;text-decoration:none;font-family:'Marcellus',serif;font-size:clamp(9px,2.3vw,13px);letter-spacing:.045em;box-shadow:0 3px 12px #120b0870,inset 0 1px 0 #fff9;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);transition:transform .25s ease,box-shadow .25s ease,filter .25s ease}
+    .map-button:hover,.map-button:focus-visible{transform:translateX(-50%) translateY(-2px) scale(1.045);box-shadow:0 6px 20px #d8b45b77,inset 0 1px 0 #fff;filter:brightness(1.07);outline:none}
+    .map-button:active{transform:translateX(-50%) scale(.97)}
+    .map-ceremony-hit{top:52.1%}
+    .map-reception-hit{top:64.4%}
+    .map-button .pin{font-size:1.15em;line-height:1;color:#76521f}
+    @media(max-width:380px){.map-button{width:43%;min-height:30px;padding:6px 8px;letter-spacing:.02em}}
     .logo-data-hit{left:37%;top:90.5%;width:26%;height:3.8%}
     .countdown{position:absolute;z-index:3;top:7.3%;left:12%;width:76%;text-align:center;color:#fff2ce;text-shadow:0 2px 8px #2c1708,0 0 12px #f6d78b88;pointer-events:none;animation:fadeUp 1.4s .25s both}
     .countdown-grid{display:flex;justify-content:center;gap:clamp(9px,3vw,23px)}
@@ -81,8 +86,8 @@
               <div class="time-unit"><span class="time-number" id="seconds">00</span><span class="time-caption">Segundos</span></div>
             </div>
           </div>
-          <a class="hotspot map-ceremony-hit" href="https://www.google.com/maps/search/?api=1&query=Parroquia+de+San+Pedro+Ap%C3%B3stol+Almoloya+de+Alquisiras+Estado+de+M%C3%A9xico" target="_blank" rel="noopener" aria-label="Ver mapa de la ceremonia"></a>
-          <a class="hotspot map-reception-hit" href="https://www.google.com/maps/search/?api=1&query=El+Vivero+Almoloya+de+Alquisiras+Estado+de+M%C3%A9xico" target="_blank" rel="noopener" aria-label="Ver mapa de la recepción"></a>
+          <a class="map-button map-ceremony-hit" href="https://www.google.com/maps/search/?api=1&query=Parroquia+de+San+Pedro+Ap%C3%B3stol+Almoloya+de+Alquisiras+Estado+de+M%C3%A9xico" target="_blank" rel="noopener" aria-label="Ver mapa de la ceremonia"><span class="pin" aria-hidden="true">⌖</span> Ver mapa</a>
+          <a class="map-button map-reception-hit" href="https://www.google.com/maps/search/?api=1&query=El+Vivero+Almoloya+de+Alquisiras+Estado+de+M%C3%A9xico" target="_blank" rel="noopener" aria-label="Ver mapa de la recepción"><span class="pin" aria-hidden="true">⌖</span> Ver mapa</a>
           <a class="hotspot logo-data-hit" href="https://fezojdesing.github.io/fezoj_studio/" target="_blank" rel="noopener" aria-label="Visitar Fezoj Studio"></a>
         </div>
         <div class="after-page">

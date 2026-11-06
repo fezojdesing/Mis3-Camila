@@ -28,13 +28,12 @@
     /* Coordenadas relativas a cada página: conservan intacta la composición del PDF. */
     .open-hit{left:27%;top:76.5%;width:46%;height:4.4%}
     .logo-cover-hit{left:36%;top:87.0%;width:28%;height:4.2%}
-    .map-button{position:absolute;z-index:5;left:50%;transform:translateX(-50%);width:39%;min-height:34px;padding:7px 12px;display:flex;align-items:center;justify-content:center;gap:7px;border:1px solid #e5ca83;border-radius:999px;background:linear-gradient(135deg,rgba(255,244,211,.96),rgba(210,174,91,.96));color:#49321d;text-decoration:none;font-family:'Marcellus',serif;font-size:clamp(9px,2.3vw,13px);letter-spacing:.045em;box-shadow:0 3px 12px #120b0870,inset 0 1px 0 #fff9;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);transition:transform .25s ease,box-shadow .25s ease,filter .25s ease}
+    .map-button{position:absolute;z-index:5;left:50%;transform:translateX(-50%);width:30%;min-height:42px;padding:8px 12px;display:flex;align-items:center;justify-content:center;border:1px solid #e5ca83;border-radius:999px;background:linear-gradient(135deg,rgba(255,244,211,.97),rgba(210,174,91,.97));color:#49321d;text-decoration:none;font-family:'Marcellus',serif;font-size:clamp(12px,3vw,16px);font-weight:500;letter-spacing:.025em;box-shadow:0 3px 12px #120b0870,inset 0 1px 0 #fff9;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);transition:transform .25s ease,box-shadow .25s ease,filter .25s ease}
     .map-button:hover,.map-button:focus-visible{transform:translateX(-50%) translateY(-2px) scale(1.045);box-shadow:0 6px 20px #d8b45b77,inset 0 1px 0 #fff;filter:brightness(1.07);outline:none}
     .map-button:active{transform:translateX(-50%) scale(.97)}
     .map-ceremony-hit{top:52.1%}
     .map-reception-hit{top:64.4%}
-    .map-button .pin{font-size:1.15em;line-height:1;color:#76521f}
-    @media(max-width:380px){.map-button{width:43%;min-height:30px;padding:6px 8px;letter-spacing:.02em}}
+    @media(max-width:380px){.map-button{width:34%;min-height:39px;padding:7px 8px;font-size:13px;letter-spacing:.01em}}
     .logo-data-hit{left:37%;top:90.5%;width:26%;height:3.8%}
     .quote-button{position:absolute;z-index:6;left:50%;top:95.1%;transform:translateX(-50%);width:46%;max-width:260px;min-height:30px;padding:7px 12px;font-size:clamp(9px,2.4vw,14px);letter-spacing:.055em;border:1px solid #e7ce83;border-radius:999px;color:#503714;background:linear-gradient(135deg,rgba(255,240,181,.96),rgba(213,174,75,.96));box-shadow:0 4px 15px #0007,inset 0 1px 0 #fff9;text-align:center;white-space:nowrap}
     .quote-button:hover,.quote-button:focus-visible{transform:translateX(-50%) translateY(-2px) scale(1.035);box-shadow:0 7px 22px #e9c76d88;filter:brightness(1.07);outline:none}
@@ -57,19 +56,37 @@
     @media(max-width:380px){#musicToggle{min-width:116px;font-size:11px}}
     .utility-button:disabled{opacity:.45;cursor:not-allowed}
     .youtube-audio{position:fixed;width:1px;height:1px;left:-10px;bottom:-10px;opacity:0;pointer-events:none}
-    .ambient{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+    .ambient{position:fixed;inset:0;z-index:8;overflow:hidden;pointer-events:none;isolation:isolate}
     .orb{position:absolute;width:clamp(100px,28vw,260px);aspect-ratio:1;border-radius:50%;filter:blur(42px);opacity:.19;background:radial-gradient(circle,#e7d5ad 0, #8b9bb2 35%,transparent 72%);animation:drift 13s ease-in-out infinite alternate}
     .orb:nth-child(1){top:9%;left:-9%}.orb:nth-child(2){top:45%;right:-12%;animation-delay:-5s;opacity:.14}.orb:nth-child(3){bottom:3%;left:22%;animation-delay:-8s;opacity:.12}
     @keyframes drift{from{transform:translate3d(-10px,-15px,0) scale(.9)}to{transform:translate3d(25px,35px,0) scale(1.18)}}
     .sparkle{position:absolute;width:4px;height:4px;border-radius:50%;background:#fff1c6;box-shadow:0 0 13px 3px #f6d98a;opacity:0;animation:twinkle 5s linear infinite}
     .sparkle:nth-child(4){top:23%;left:18%;animation-delay:1s}.sparkle:nth-child(5){top:58%;right:16%;animation-delay:2.7s}.sparkle:nth-child(6){top:77%;left:72%;animation-delay:3.5s}
     @keyframes twinkle{0%,100%{opacity:0;transform:scale(.5)}45%{opacity:.8;transform:scale(1.4)}65%{opacity:.2;transform:scale(.7)}}
+    /* Bokeh: destellos circulares desenfocados en tonos champagne y azul noche. */
+    .bokeh{position:absolute;border-radius:50%;border:1px solid rgba(255,235,185,.5);background:radial-gradient(circle at 35% 30%,rgba(255,255,235,.78),rgba(236,199,116,.22) 34%,rgba(89,126,166,.12) 68%,transparent 74%);box-shadow:0 0 24px rgba(221,190,126,.18),inset 0 0 18px rgba(255,255,255,.16);filter:blur(1.5px);opacity:0;animation:bokehFloat 12s ease-in-out infinite}
+    .bokeh:nth-child(7){width:74px;height:74px;left:7%;top:19%;animation-delay:-2s}
+    .bokeh:nth-child(8){width:38px;height:38px;left:79%;top:14%;animation-delay:-7s}
+    .bokeh:nth-child(9){width:112px;height:112px;right:3%;top:47%;animation-delay:-4s}
+    .bokeh:nth-child(10){width:52px;height:52px;left:17%;top:70%;animation-delay:-9s}
+    .bokeh:nth-child(11){width:27px;height:27px;right:23%;top:78%;animation-delay:-5s}
+    .bokeh:nth-child(12){width:88px;height:88px;left:42%;top:39%;animation-delay:-11s}
+    @keyframes bokehFloat{0%,100%{opacity:0;transform:translate3d(0,16px,0) scale(.72)}25%,72%{opacity:.5}50%{opacity:.24;transform:translate3d(12px,-22px,0) scale(1.08)}}
+    .page-transition{position:fixed;inset:0;z-index:15;pointer-events:none;opacity:0;background:radial-gradient(circle at 50% 50%,rgba(255,232,174,.34),transparent 38%),radial-gradient(circle at 22% 28%,rgba(214,184,112,.25),transparent 24%),radial-gradient(circle at 78% 70%,rgba(111,151,190,.22),transparent 28%)}
+    .page-transition::before,.page-transition::after{content:"✧  ·  ✦  ·  ✧";position:absolute;left:50%;top:50%;color:#fff0c5;text-shadow:0 0 12px #e9c76d,0 0 28px #e9c76d;font-size:clamp(24px,7vw,54px);letter-spacing:.5em;white-space:nowrap;transform:translate(-50%,-50%) scale(.65);opacity:0}
+    .page-transition::after{content:"·  ✧  ·";color:#c9d9ed;font-size:clamp(18px,5vw,38px);letter-spacing:.8em}
+    .page-transition.active{animation:pageGlow .95s ease-out both}
+    .page-transition.active::before{animation:starBurst .95s ease-out both}
+    .page-transition.active::after{animation:starBurst .95s .08s ease-out both}
+    @keyframes pageGlow{0%{opacity:0}22%{opacity:1}100%{opacity:0}}
+    @keyframes starBurst{0%{opacity:0;transform:translate(-50%,-50%) scale(.35) rotate(-12deg);filter:blur(5px)}35%{opacity:.95;filter:blur(0)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.45) rotate(12deg);filter:blur(3px)}}
     @media(min-width:700px){.screen{padding-top:22px}.page,.after-page{border-radius:3px}.page-art{border-radius:3px}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
   </style>
 </head>
 <body>
-  <div class="ambient" aria-hidden="true"><span class="orb"></span><span class="orb"></span><span class="orb"></span><i class="sparkle"></i><i class="sparkle"></i><i class="sparkle"></i></div>
+  <div class="ambient" aria-hidden="true"><span class="orb"></span><span class="orb"></span><span class="orb"></span><i class="sparkle"></i><i class="sparkle"></i><i class="sparkle"></i><i class="bokeh"></i><i class="bokeh"></i><i class="bokeh"></i><i class="bokeh"></i><i class="bokeh"></i><i class="bokeh"></i></div>
+  <div class="page-transition" id="pageTransition" aria-hidden="true"></div>
 
   <main>
     <section class="screen" id="coverScreen" aria-label="Portada">
@@ -92,8 +109,8 @@
               <div class="time-unit"><span class="time-number" id="seconds">00</span><span class="time-caption">Segundos</span></div>
             </div>
           </div>
-          <a class="map-button map-ceremony-hit" href="https://www.google.com/maps/search/?api=1&query=Parroquia+de+San+Pedro+Ap%C3%B3stol+Almoloya+de+Alquisiras+Estado+de+M%C3%A9xico" target="_blank" rel="noopener" aria-label="Ver mapa de la ceremonia"><span class="pin" aria-hidden="true">⌖</span> Ver mapa</a>
-          <a class="map-button map-reception-hit" href="https://www.google.com/maps/search/?api=1&query=El+Vivero+Almoloya+de+Alquisiras+Estado+de+M%C3%A9xico" target="_blank" rel="noopener" aria-label="Ver mapa de la recepción"><span class="pin" aria-hidden="true">⌖</span> Ver mapa</a>
+          <a class="map-button map-ceremony-hit" href="https://www.google.com/maps/search/?api=1&query=Parroquia+de+San+Pedro+Ap%C3%B3stol+Almoloya+de+Alquisiras+Estado+de+M%C3%A9xico" target="_blank" rel="noopener" aria-label="Ver mapa de la ceremonia">Ver mapas</a>
+          <a class="map-button map-reception-hit" href="https://www.google.com/maps/search/?api=1&query=El+Vivero+Almoloya+de+Alquisiras+Estado+de+M%C3%A9xico" target="_blank" rel="noopener" aria-label="Ver mapa de la recepción">Ver mapas</a>
           <a class="hotspot logo-data-hit" href="https://fezojdesing.github.io/fezoj_studio/" target="_blank" rel="noopener" aria-label="Visitar Fezoj Studio"></a>
           <a class="quote-button" href="https://fezojdesing.github.io/fezoj_studio/contacto.html" target="_blank" rel="noopener">Cotiza tu invitación</a>
         </div>
@@ -115,6 +132,7 @@
       const musicButton = document.getElementById('musicToggle');
       const backButton = document.getElementById('backToCover');
       const utilityBar = document.getElementById('utilityBar');
+      const pageTransition = document.getElementById('pageTransition');
       const videoId = 'K8IhHiR6yqU';
       let playerFrame = null;
       let playing = false;
@@ -140,7 +158,13 @@
         musicButton.setAttribute('aria-label', playing ? 'Pausar música' : 'Reproducir música');
         musicButton.setAttribute('title', playing ? 'Pausar música' : 'Reproducir música');
       }
+      function playPageTransition(){
+        pageTransition.classList.remove('active');
+        void pageTransition.offsetWidth;
+        pageTransition.classList.add('active');
+      }
       function showData(){
+        playPageTransition();
         cover.hidden = true;
         data.hidden = false;
         utilityBar.hidden = false;
@@ -161,6 +185,7 @@
         updateMusicButton();
       });
       backButton.addEventListener('click', () => {
+        playPageTransition();
         data.hidden = true;
         cover.hidden = false;
         utilityBar.hidden = true;

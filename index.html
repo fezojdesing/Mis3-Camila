@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#11131b">
+  <meta name="description" content="Invitación digital de los 3 añitos de Camila Cruzalta Popoca. 2 de enero de 2027.">
+  <title>Mis 3 añitos Camila Cruzalta Popoca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+  <style>
+    :root{--cream:#fff5d7;--gold:#d5b45b;--blue:#344b60;--brown:#593b27}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:#090a0e}
+    body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 20%,#222431 0,#090a0e 70%);color:var(--cream);font-family:'Cormorant Garamond',serif;overflow-x:hidden}
+    button,a{-webkit-tap-highlight-color:transparent}
+    .screen{width:100%;min-height:100svh;display:flex;justify-content:center;align-items:flex-start;padding:0 0 34px;position:relative;isolation:isolate}
+    .screen[hidden]{display:none}
+    .page{width:min(100%,625px);position:relative;overflow:hidden;box-shadow:0 18px 70px #0008;animation:pageIn .9s cubic-bezier(.2,.7,.2,1) both}
+    .page-art{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
+    @keyframes pageIn{from{opacity:0;transform:translateY(18px) scale(.992);filter:blur(5px)}to{opacity:1;transform:none;filter:blur(0)}}
+    .hotspot{position:absolute;display:block;border:0;background:transparent;cursor:pointer;z-index:4;border-radius:999px;outline-offset:5px}
+    .hotspot:focus-visible{outline:2px solid #fff2bd}
+    .hotspot::after{content:"";position:absolute;inset:-5px;border-radius:inherit;box-shadow:0 0 0 0 #fff7;transition:box-shadow .3s,transform .3s}
+    .hotspot:hover::after,.hotspot:focus-visible::after{box-shadow:0 0 24px 5px #fff9;transform:scale(1.035)}
+    .hotspot:active{transform:scale(.96)}
+    /* Coordenadas relativas a cada página: conservan intacta la composición del PDF. */
+    .open-hit{left:27%;top:76.5%;width:46%;height:4.4%}
+    .logo-cover-hit{left:36%;top:87.0%;width:28%;height:4.2%}
+    .map-ceremony-hit{left:31%;top:52.8%;width:38%;height:2.2%}
+    .map-reception-hit{left:31%;top:65.1%;width:38%;height:2.2%}
+    .logo-data-hit{left:37%;top:90.5%;width:26%;height:3.8%}
+    .countdown{position:absolute;z-index:3;top:7.3%;left:12%;width:76%;text-align:center;color:#fff2ce;text-shadow:0 2px 8px #2c1708,0 0 12px #f6d78b88;pointer-events:none;animation:fadeUp 1.4s .25s both}
+    .countdown-grid{display:flex;justify-content:center;gap:clamp(9px,3vw,23px)}
+    .time-unit{min-width:clamp(35px,9vw,55px)}
+    .time-number{display:block;font-size:clamp(23px,6vw,37px);line-height:1;font-weight:500;font-variant-numeric:tabular-nums}
+    .time-caption{display:block;margin-top:3px;font-family:'Marcellus',serif;font-size:clamp(7px,1.7vw,10px);letter-spacing:.1em;text-transform:uppercase}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+    .after-page{width:min(100%,625px);padding:22px 18px 34px;text-align:center;background:linear-gradient(180deg,#3b281d,#1c1715);border-top:1px solid #caa64c;box-shadow:0 18px 70px #0008}
+    .quote-button,.utility-button{font-family:'Marcellus',serif;letter-spacing:.07em;border:1px solid #e7ce83;color:#503714;background:linear-gradient(135deg,#fff0b5,#d5ae4b);border-radius:999px;padding:13px 24px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 5px 22px #d7b45455;transition:transform .28s,box-shadow .28s,filter .28s}
+    .quote-button{font-size:15px;min-width:min(100%,260px)}
+    .quote-button:hover,.utility-button:hover{transform:translateY(-3px) scale(1.035);box-shadow:0 9px 30px #e9c76d88;filter:brightness(1.08)}
+    .quote-button:active,.utility-button:active{transform:scale(.96)}
+    .utility-bar{position:fixed;z-index:20;right:max(12px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));display:flex;gap:9px;align-items:center}
+    .utility-button{width:37px;height:37px;min-width:37px;min-height:37px;padding:0;background:#18202bd9;color:#fff1c9;border:1px solid #f2d68c88;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);font-size:15px;box-shadow:0 4px 20px #0006}
+    .utility-button:disabled{opacity:.45;cursor:not-allowed}
+    .youtube-audio{position:fixed;width:1px;height:1px;left:-10px;bottom:-10px;opacity:0;pointer-events:none}
+    .ambient{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+    .orb{position:absolute;width:clamp(100px,28vw,260px);aspect-ratio:1;border-radius:50%;filter:blur(42px);opacity:.19;background:radial-gradient(circle,#e7d5ad 0, #8b9bb2 35%,transparent 72%);animation:drift 13s ease-in-out infinite alternate}
+    .orb:nth-child(1){top:9%;left:-9%}.orb:nth-child(2){top:45%;right:-12%;animation-delay:-5s;opacity:.14}.orb:nth-child(3){bottom:3%;left:22%;animation-delay:-8s;opacity:.12}
+    @keyframes drift{from{transform:translate3d(-10px,-15px,0) scale(.9)}to{transform:translate3d(25px,35px,0) scale(1.18)}}
+    .sparkle{position:absolute;width:4px;height:4px;border-radius:50%;background:#fff1c6;box-shadow:0 0 13px 3px #f6d98a;opacity:0;animation:twinkle 5s linear infinite}
+    .sparkle:nth-child(4){top:23%;left:18%;animation-delay:1s}.sparkle:nth-child(5){top:58%;right:16%;animation-delay:2.7s}.sparkle:nth-child(6){top:77%;left:72%;animation-delay:3.5s}
+    @keyframes twinkle{0%,100%{opacity:0;transform:scale(.5)}45%{opacity:.8;transform:scale(1.4)}65%{opacity:.2;transform:scale(.7)}}
+    @media(min-width:700px){.screen{padding-top:22px}.page,.after-page{border-radius:3px}.page-art{border-radius:3px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span class="orb"></span><span class="orb"></span><span class="orb"></span><i class="sparkle"></i><i class="sparkle"></i><i class="sparkle"></i></div>
+
+  <main>
+    <section class="screen" id="coverScreen" aria-label="Portada">
+      <div class="page" id="coverPage">
+        <img class="page-art" src="assets/portada.webp" alt="Portada de la invitación de los 3 añitos de Camila Cruzalta Popoca">
+        <button class="hotspot open-hit" id="openInvitation" aria-label="Toca para abrir la invitación"></button>
+        <a class="hotspot logo-cover-hit" href="https://fezojdesing.github.io/fezoj_studio/" target="_blank" rel="noopener" aria-label="Visitar Fezoj Studio"></a>
+      </div>
+    </section>
+
+    <section class="screen" id="dataScreen" aria-label="Datos" hidden>
+      <div>
+        <div class="page" id="dataPage">
+          <img class="page-art" src="assets/datos.webp" alt="Datos de la celebración de Camila: padres, padrinos, ceremonia y recepción">
+          <div class="countdown" aria-live="off">
+              <div class="countdown-grid">
+              <div class="time-unit"><span class="time-number" id="days">00</span><span class="time-caption">Días</span></div>
+              <div class="time-unit"><span class="time-number" id="hours">00</span><span class="time-caption">Horas</span></div>
+              <div class="time-unit"><span class="time-number" id="minutes">00</span><span class="time-caption">Minutos</span></div>
+              <div class="time-unit"><span class="time-number" id="seconds">00</span><span class="time-caption">Segundos</span></div>
+            </div>
+          </div>
+          <a class="hotspot map-ceremony-hit" href="https://www.google.com/maps/search/?api=1&query=Parroquia+de+San+Pedro+Ap%C3%B3stol+Almoloya+de+Alquisiras+Estado+de+M%C3%A9xico" target="_blank" rel="noopener" aria-label="Ver mapa de la ceremonia"></a>
+          <a class="hotspot map-reception-hit" href="https://www.google.com/maps/search/?api=1&query=El+Vivero+Almoloya+de+Alquisiras+Estado+de+M%C3%A9xico" target="_blank" rel="noopener" aria-label="Ver mapa de la recepción"></a>
+          <a class="hotspot logo-data-hit" href="https://fezojdesing.github.io/fezoj_studio/" target="_blank" rel="noopener" aria-label="Visitar Fezoj Studio"></a>
+        </div>
+        <div class="after-page">
+          <a class="quote-button" href="https://fezojdesing.github.io/fezoj_studio/contacto.html" target="_blank" rel="noopener">Cotiza tu invitación</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="utility-bar" id="utilityBar" hidden>
+    <button class="utility-button" id="musicToggle" type="button" aria-label="Pausar música" title="Pausar o reproducir música">Ⅱ</button>
+    <button class="utility-button" id="backToCover" type="button" aria-label="Volver a la portada" title="Volver a la portada">⌂</button>
+  </div>
+  <div class="youtube-audio" id="youtubeAudio" aria-hidden="true"></div>
+
+  <script>
+    (() => {
+      const cover = document.getElementById('coverScreen');
+      const data = document.getElementById('dataScreen');
+      const openButton = document.getElementById('openInvitation');
+      const musicButton = document.getElementById('musicToggle');
+      const backButton = document.getElementById('backToCover');
+      const utilityBar = document.getElementById('utilityBar');
+      const videoId = 'K8IhHiR6yqU';
+      let playerFrame = null;
+      let playing = false;
+      let opened = false;
+
+      function startMusicFromTap() {
+        if (playerFrame) {
+          playerFrame.contentWindow?.postMessage(JSON.stringify({event:'command',func:'playVideo',args:[]}), '*');
+          playing = true;
+          updateMusicButton();
+          return;
+        }
+        playerFrame = document.createElement('iframe');
+        playerFrame.title = 'Música de la invitación';
+        playerFrame.allow = 'autoplay; encrypted-media; picture-in-picture';
+        playerFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&controls=0&loop=1&playlist=${videoId}&playsinline=1&enablejsapi=1&rel=0`;
+        document.getElementById('youtubeAudio').appendChild(playerFrame);
+        playing = true;
+        updateMusicButton();
+      }
+      function updateMusicButton(){
+        musicButton.textContent = playing ? 'Ⅱ' : '▶';
+        musicButton.setAttribute('aria-label', playing ? 'Pausar música' : 'Reproducir música');
+      }
+      function showData(){
+        cover.hidden = true;
+        data.hidden = false;
+        utilityBar.hidden = false;
+        window.scrollTo({top:0,behavior:'smooth'});
+        data.querySelector('.page').style.animation='none';
+        requestAnimationFrame(()=>data.querySelector('.page').style.animation='');
+      }
+      openButton.addEventListener('click', () => {
+        startMusicFromTap();
+        opened = true;
+        showData();
+      });
+      musicButton.addEventListener('click', () => {
+        if (!playerFrame) { startMusicFromTap(); return; }
+        const command = playing ? 'pauseVideo' : 'playVideo';
+        playerFrame.contentWindow?.postMessage(JSON.stringify({event:'command',func:command,args:[]}), '*');
+        playing = !playing;
+        updateMusicButton();
+      });
+      backButton.addEventListener('click', () => {
+        data.hidden = true;
+        cover.hidden = false;
+        utilityBar.hidden = true;
+        window.scrollTo({top:0,behavior:'smooth'});
+      });
+
+      // La ceremonia comienza a las 2:00 PM, hora local de Almoloya de Alquisiras.
+      const eventDate = new Date('2027-01-02T14:00:00-06:00').getTime();
+      const pad = n => String(Math.max(0,n)).padStart(2,'0');
+      function tick(){
+        let diff = Math.max(0,eventDate-Date.now());
+        const days = Math.floor(diff/86400000); diff %= 86400000;
+        const hours = Math.floor(diff/3600000); diff %= 3600000;
+        const minutes = Math.floor(diff/60000); diff %= 60000;
+        const seconds = Math.floor(diff/1000);
+        document.getElementById('days').textContent = pad(days);
+        document.getElementById('hours').textContent = pad(hours);
+        document.getElementById('minutes').textContent = pad(minutes);
+        document.getElementById('seconds').textContent = pad(seconds);
+      }
+      tick();
+      setInterval(tick,1000);
+    })();
+  </script>
+</body>
+</html>

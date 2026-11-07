@@ -46,14 +46,16 @@
     .time-caption{display:block;margin-top:5px;font-family:'Marcellus',serif;font-size:clamp(9px,2.1vw,13px);letter-spacing:.1em;text-transform:uppercase}
     @media(max-width:380px){.countdown{top:6.6%;left:3%;width:94%}.countdown-grid{gap:clamp(5px,2vw,9px)}.time-unit{min-width:0;flex:1}.time-number{font-size:clamp(31px,8.6vw,40px)}.time-caption{font-size:clamp(7px,1.9vw,9px);letter-spacing:.06em}}
     @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-    .utility-button{font-family:'Marcellus',serif;letter-spacing:.035em;border:1px solid rgba(255,222,225,.78);color:#fff8f5;background:linear-gradient(125deg,rgba(105,69,139,.94),rgba(188,111,157,.94) 62%,rgba(206,165,105,.94));border-radius:999px;padding:0;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 20px #21132d88,inset 0 1px 0 #fff6;text-shadow:0 1px 3px #3d244d88;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:transform .28s,box-shadow .28s,filter .28s}
+    .utility-button{position:relative;overflow:hidden;font-family:'Marcellus',serif;letter-spacing:.035em;border:1px solid rgba(255,255,255,.48);color:#fffafc;background:linear-gradient(135deg,rgba(255,255,255,.34),rgba(239,220,250,.13) 42%,rgba(214,168,202,.2)),rgba(255,255,255,.12);border-radius:999px;padding:0;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 8px 26px rgba(31,18,46,.22),inset 0 1px 0 rgba(255,255,255,.72),inset 0 -1px 0 rgba(255,255,255,.12);text-shadow:0 1px 4px rgba(47,28,59,.6);backdrop-filter:blur(22px) saturate(165%);-webkit-backdrop-filter:blur(22px) saturate(165%);transition:transform .28s,box-shadow .28s,background .28s,filter .28s}
+    .utility-button::before{content:"";position:absolute;inset:1px;border-radius:inherit;background:linear-gradient(115deg,rgba(255,255,255,.3),transparent 38%,rgba(255,255,255,.08) 72%,rgba(255,255,255,.2));pointer-events:none}
+    .utility-button>*{position:relative}
     .utility-bar{position:fixed;z-index:20;left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));display:flex;justify-content:space-between;gap:9px;align-items:center;pointer-events:none}
-    .utility-button{min-height:39px;padding:0 13px;pointer-events:auto;font-size:12px}
-    #backToCover{width:39px;height:39px;min-width:39px;padding:0;font-size:19px}
+    .utility-button{min-height:42px;padding:0 17px;pointer-events:auto;font-size:12px}
+    #backToCover{width:auto;height:42px;min-width:78px;padding:0 16px;font-size:12px}
     #musicToggle{min-width:126px}
-    .utility-button:hover{transform:translateY(-3px) scale(1.035);box-shadow:0 9px 30px #d58abbaa;filter:brightness(1.1)}
+    .utility-button:hover{transform:translateY(-3px) scale(1.035);box-shadow:0 10px 30px rgba(239,194,225,.35),inset 0 1px 0 rgba(255,255,255,.82);background:linear-gradient(135deg,rgba(255,255,255,.46),rgba(239,220,250,.2) 42%,rgba(214,168,202,.28)),rgba(255,255,255,.16);filter:brightness(1.08)}
     .utility-button:active{transform:scale(.96)}
-    @media(max-width:380px){#musicToggle{min-width:116px;font-size:11px}}
+    @media(max-width:380px){#backToCover{min-width:72px;padding:0 13px}#musicToggle{min-width:116px;font-size:11px}}
     .utility-button:disabled{opacity:.45;cursor:not-allowed}
     .youtube-audio{position:fixed;width:1px;height:1px;left:-10px;bottom:-10px;opacity:0;pointer-events:none}
     .ambient{position:fixed;inset:0;z-index:8;overflow:hidden;pointer-events:none;isolation:isolate}
@@ -120,7 +122,7 @@
   </main>
 
   <div class="utility-bar" id="utilityBar" hidden>
-    <button class="utility-button" id="backToCover" type="button" aria-label="Volver a la portada" title="Volver a la portada">⌂</button>
+    <button class="utility-button" id="backToCover" type="button" aria-label="Volver al inicio" title="Volver al inicio">Inicio</button>
     <button class="utility-button" id="musicToggle" type="button" aria-label="Pausar música" title="Pausar música">Pausar música</button>
   </div>
   <div class="youtube-audio" id="youtubeAudio" aria-hidden="true"></div>

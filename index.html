@@ -28,15 +28,15 @@
     /* Coordenadas relativas a cada página: conservan intacta la composición del PDF. */
     .open-hit{left:27%;top:76.5%;width:46%;height:4.4%}
     .logo-cover-hit{left:36%;top:87.0%;width:28%;height:4.2%}
-    .map-button{position:absolute;z-index:5;left:50%;transform:translateX(-50%);width:30%;min-height:42px;padding:8px 12px;display:flex;align-items:center;justify-content:center;border:1px solid #e5ca83;border-radius:999px;background:linear-gradient(135deg,rgba(255,244,211,.97),rgba(210,174,91,.97));color:#49321d;text-decoration:none;font-family:'Marcellus',serif;font-size:clamp(12px,3vw,16px);font-weight:500;letter-spacing:.025em;box-shadow:0 3px 12px #120b0870,inset 0 1px 0 #fff9;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);transition:transform .25s ease,box-shadow .25s ease,filter .25s ease}
-    .map-button:hover,.map-button:focus-visible{transform:translateX(-50%) translateY(-2px) scale(1.045);box-shadow:0 6px 20px #d8b45b77,inset 0 1px 0 #fff;filter:brightness(1.07);outline:none}
+    .map-button{position:absolute;z-index:5;left:50%;transform:translateX(-50%);width:30%;min-height:42px;padding:8px 12px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,220,224,.9);border-radius:999px;background:linear-gradient(125deg,rgba(119,78,151,.97),rgba(205,132,169,.97) 56%,rgba(222,184,112,.97));color:#fff8f1;text-decoration:none;font-family:'Marcellus',serif;font-size:clamp(12px,3vw,16px);font-weight:500;letter-spacing:.025em;text-shadow:0 1px 3px #4b285c88;box-shadow:0 3px 14px #26142f88,inset 0 1px 0 #fff9;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);transition:transform .25s ease,box-shadow .25s ease,filter .25s ease}
+    .map-button:hover,.map-button:focus-visible{transform:translateX(-50%) translateY(-2px) scale(1.045);box-shadow:0 6px 22px #d58abbaa,inset 0 1px 0 #fff;filter:brightness(1.07);outline:none}
     .map-button:active{transform:translateX(-50%) scale(.97)}
     .map-ceremony-hit{top:52.1%}
     .map-reception-hit{top:64.4%}
     @media(max-width:380px){.map-button{width:34%;min-height:39px;padding:7px 8px;font-size:13px;letter-spacing:.01em}}
     .logo-data-hit{left:37%;top:90.5%;width:26%;height:3.8%}
-    .quote-button{position:absolute;z-index:6;left:50%;top:95.1%;transform:translateX(-50%);width:46%;max-width:260px;min-height:30px;padding:7px 12px;font-size:clamp(9px,2.4vw,14px);letter-spacing:.055em;border:1px solid #e7ce83;border-radius:999px;color:#503714;background:linear-gradient(135deg,rgba(255,240,181,.96),rgba(213,174,75,.96));box-shadow:0 4px 15px #0007,inset 0 1px 0 #fff9;text-align:center;white-space:nowrap}
-    .quote-button:hover,.quote-button:focus-visible{transform:translateX(-50%) translateY(-2px) scale(1.035);box-shadow:0 7px 22px #e9c76d88;filter:brightness(1.07);outline:none}
+    .quote-button{position:absolute;z-index:6;left:50%;top:95.1%;transform:translateX(-50%);width:46%;max-width:260px;min-height:30px;padding:7px 12px;font-size:clamp(9px,2.4vw,14px);letter-spacing:.055em;border:1px solid rgba(255,222,220,.95);border-radius:999px;color:#fff8f2;background:linear-gradient(125deg,rgba(111,72,145,.98),rgba(198,119,161,.98) 58%,rgba(218,177,107,.98));text-shadow:0 1px 3px #4b285c88;box-shadow:0 4px 16px #26142f88,inset 0 1px 0 #fff9;text-align:center;white-space:nowrap}
+    .quote-button:hover,.quote-button:focus-visible{transform:translateX(-50%) translateY(-2px) scale(1.035);box-shadow:0 7px 22px #d58abbaa;filter:brightness(1.08);outline:none}
     .quote-button:active{transform:translateX(-50%) scale(.97)}
     @media(max-width:380px){.quote-button{width:52%;min-height:28px;padding:6px 9px;font-size:10px}}
     .countdown{position:absolute;z-index:3;top:6.8%;left:7%;width:86%;text-align:center;color:#fff2ce;text-shadow:0 2px 9px #2c1708,0 0 16px #f6d78b99;pointer-events:none;animation:fadeUp 1.4s .25s both}
@@ -46,12 +46,12 @@
     .time-caption{display:block;margin-top:5px;font-family:'Marcellus',serif;font-size:clamp(9px,2.1vw,13px);letter-spacing:.1em;text-transform:uppercase}
     @media(max-width:380px){.countdown{top:6.6%;left:3%;width:94%}.countdown-grid{gap:clamp(5px,2vw,9px)}.time-unit{min-width:0;flex:1}.time-number{font-size:clamp(31px,8.6vw,40px)}.time-caption{font-size:clamp(7px,1.9vw,9px);letter-spacing:.06em}}
     @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-    .utility-button{font-family:'Marcellus',serif;letter-spacing:.035em;border:1px solid #f2d68c88;color:#fff1c9;background:#18202bd9;border-radius:999px;padding:0;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 20px #0006;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:transform .28s,box-shadow .28s,filter .28s}
+    .utility-button{font-family:'Marcellus',serif;letter-spacing:.035em;border:1px solid rgba(255,222,225,.78);color:#fff8f5;background:linear-gradient(125deg,rgba(105,69,139,.94),rgba(188,111,157,.94) 62%,rgba(206,165,105,.94));border-radius:999px;padding:0;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 20px #21132d88,inset 0 1px 0 #fff6;text-shadow:0 1px 3px #3d244d88;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:transform .28s,box-shadow .28s,filter .28s}
     .utility-bar{position:fixed;z-index:20;left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));display:flex;justify-content:space-between;gap:9px;align-items:center;pointer-events:none}
     .utility-button{min-height:39px;padding:0 13px;pointer-events:auto;font-size:12px}
     #backToCover{width:39px;height:39px;min-width:39px;padding:0;font-size:19px}
     #musicToggle{min-width:126px}
-    .utility-button:hover{transform:translateY(-3px) scale(1.035);box-shadow:0 9px 30px #e9c76d66;filter:brightness(1.08)}
+    .utility-button:hover{transform:translateY(-3px) scale(1.035);box-shadow:0 9px 30px #d58abbaa;filter:brightness(1.1)}
     .utility-button:active{transform:scale(.96)}
     @media(max-width:380px){#musicToggle{min-width:116px;font-size:11px}}
     .utility-button:disabled{opacity:.45;cursor:not-allowed}
@@ -63,15 +63,16 @@
     .sparkle{position:absolute;width:4px;height:4px;border-radius:50%;background:#fff1c6;box-shadow:0 0 13px 3px #f6d98a;opacity:0;animation:twinkle 5s linear infinite}
     .sparkle:nth-child(4){top:23%;left:18%;animation-delay:1s}.sparkle:nth-child(5){top:58%;right:16%;animation-delay:2.7s}.sparkle:nth-child(6){top:77%;left:72%;animation-delay:3.5s}
     @keyframes twinkle{0%,100%{opacity:0;transform:scale(.5)}45%{opacity:.8;transform:scale(1.4)}65%{opacity:.2;transform:scale(.7)}}
-    /* Bokeh: destellos circulares desenfocados en tonos champagne y azul noche. */
-    .bokeh{position:absolute;border-radius:50%;border:1px solid rgba(255,235,185,.5);background:radial-gradient(circle at 35% 30%,rgba(255,255,235,.78),rgba(236,199,116,.22) 34%,rgba(89,126,166,.12) 68%,transparent 74%);box-shadow:0 0 24px rgba(221,190,126,.18),inset 0 0 18px rgba(255,255,255,.16);filter:blur(1.5px);opacity:0;animation:bokehFloat 12s ease-in-out infinite}
-    .bokeh:nth-child(7){width:74px;height:74px;left:7%;top:19%;animation-delay:-2s}
-    .bokeh:nth-child(8){width:38px;height:38px;left:79%;top:14%;animation-delay:-7s}
-    .bokeh:nth-child(9){width:112px;height:112px;right:3%;top:47%;animation-delay:-4s}
-    .bokeh:nth-child(10){width:52px;height:52px;left:17%;top:70%;animation-delay:-9s}
-    .bokeh:nth-child(11){width:27px;height:27px;right:23%;top:78%;animation-delay:-5s}
-    .bokeh:nth-child(12){width:88px;height:88px;left:42%;top:39%;animation-delay:-11s}
-    @keyframes bokehFloat{0%,100%{opacity:0;transform:translate3d(0,16px,0) scale(.72)}25%,72%{opacity:.5}50%{opacity:.24;transform:translate3d(12px,-22px,0) scale(1.08)}}
+    /* Corazones flotantes en morado, rosa y dorado: reemplazan el bokeh circular. */
+    .heart-float{position:absolute;display:block;font-style:normal;line-height:1;color:var(--heart-color,#d99ab9);font-size:clamp(22px,5vw,42px);opacity:0;text-shadow:0 0 7px currentColor,0 0 19px currentColor,0 2px 5px #160d25;filter:drop-shadow(0 0 5px currentColor);animation:heartDrift 13s ease-in-out infinite}
+    .heart-float::before{content:"♥"}
+    .heart-float:nth-child(7){--heart-color:#b995e6;left:8%;top:19%;font-size:35px;animation-delay:-2s}
+    .heart-float:nth-child(8){--heart-color:#e6a0c3;left:79%;top:14%;font-size:24px;animation-delay:-7s}
+    .heart-float:nth-child(9){--heart-color:#dfbd79;right:7%;top:48%;font-size:42px;animation-delay:-4s}
+    .heart-float:nth-child(10){--heart-color:#d98bb4;left:17%;top:70%;font-size:29px;animation-delay:-9s}
+    .heart-float:nth-child(11){--heart-color:#c5a0e9;right:23%;top:78%;font-size:21px;animation-delay:-5s}
+    .heart-float:nth-child(12){--heart-color:#e1bd7e;left:43%;top:39%;font-size:33px;animation-delay:-11s}
+    @keyframes heartDrift{0%,100%{opacity:0;transform:translate3d(0,18px,0) scale(.72) rotate(-12deg)}22%,72%{opacity:.62}48%{opacity:.3;transform:translate3d(12px,-24px,0) scale(1.12) rotate(10deg)}}
     .page-transition{position:fixed;inset:0;z-index:15;pointer-events:none;opacity:0;background:radial-gradient(circle at 50% 50%,rgba(255,232,174,.34),transparent 38%),radial-gradient(circle at 22% 28%,rgba(214,184,112,.25),transparent 24%),radial-gradient(circle at 78% 70%,rgba(111,151,190,.22),transparent 28%)}
     .page-transition::before,.page-transition::after{content:"✧  ·  ✦  ·  ✧";position:absolute;left:50%;top:50%;color:#fff0c5;text-shadow:0 0 12px #e9c76d,0 0 28px #e9c76d;font-size:clamp(24px,7vw,54px);letter-spacing:.5em;white-space:nowrap;transform:translate(-50%,-50%) scale(.65);opacity:0}
     .page-transition::after{content:"·  ✧  ·";color:#c9d9ed;font-size:clamp(18px,5vw,38px);letter-spacing:.8em}
@@ -85,7 +86,7 @@
   </style>
 </head>
 <body>
-  <div class="ambient" aria-hidden="true"><span class="orb"></span><span class="orb"></span><span class="orb"></span><i class="sparkle"></i><i class="sparkle"></i><i class="sparkle"></i><i class="bokeh"></i><i class="bokeh"></i><i class="bokeh"></i><i class="bokeh"></i><i class="bokeh"></i><i class="bokeh"></i></div>
+  <div class="ambient" aria-hidden="true"><span class="orb"></span><span class="orb"></span><span class="orb"></span><i class="sparkle"></i><i class="sparkle"></i><i class="sparkle"></i><i class="heart-float"></i><i class="heart-float"></i><i class="heart-float"></i><i class="heart-float"></i><i class="heart-float"></i><i class="heart-float"></i></div>
   <div class="page-transition" id="pageTransition" aria-hidden="true"></div>
 
   <main>

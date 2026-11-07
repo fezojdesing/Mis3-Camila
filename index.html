@@ -57,7 +57,7 @@
     .utility-button:active{transform:scale(.96)}
     @media(max-width:380px){#backToCover{min-width:72px;padding:0 13px}#musicToggle{min-width:116px;font-size:11px}}
     .utility-button:disabled{opacity:.45;cursor:not-allowed}
-    .youtube-audio{position:fixed;width:1px;height:1px;left:-10px;bottom:-10px;opacity:0;pointer-events:none}
+    .invitation-audio{display:none}
     .ambient{position:fixed;inset:0;z-index:8;overflow:hidden;pointer-events:none;isolation:isolate}
     .orb{position:absolute;width:clamp(100px,28vw,260px);aspect-ratio:1;border-radius:50%;filter:blur(42px);opacity:.23;background:radial-gradient(circle,#f0c9d9 0, #b99acb 38%,transparent 72%);animation:drift 13s ease-in-out infinite alternate}
     .orb:nth-child(1){top:9%;left:-9%}.orb:nth-child(2){top:45%;right:-12%;animation-delay:-5s;opacity:.14}.orb:nth-child(3){bottom:3%;left:22%;animation-delay:-8s;opacity:.12}
@@ -125,7 +125,7 @@
     <button class="utility-button" id="backToCover" type="button" aria-label="Volver al inicio" title="Volver al inicio">Inicio</button>
     <button class="utility-button" id="musicToggle" type="button" aria-label="Pausar música" title="Pausar música">Pausar música</button>
   </div>
-  <div class="youtube-audio" id="youtubeAudio" aria-hidden="true"></div>
+  <audio class="invitation-audio" id="invitationAudio" src="Musica.mp3" preload="auto" loop></audio>
 
   <script>
     (() => {
@@ -136,24 +136,17 @@
       const backButton = document.getElementById('backToCover');
       const utilityBar = document.getElementById('utilityBar');
       const pageTransition = document.getElementById('pageTransition');
-      const videoId = 'fZSZMp32XaA';
-      let playerFrame = null;
+      const invitationAudio = document.getElementById('invitationAudio');
       let playing = false;
-      let opened = false;
 
-      function startMusicFromTap() {
-        if (playerFrame) {
-          playerFrame.contentWindow?.postMessage(JSON.stringify({event:'command',func:'playVideo',args:[]}), '*');
+      async function startMusicFromTap() {
+        try {
+          await invitationAudio.play();
           playing = true;
-          updateMusicButton();
-          return;
+        } catch (error) {
+          playing = false;
+          console.warn('No se pudo iniciar la música:', error);
         }
-        playerFrame = document.createElement('iframe');
-        playerFrame.title = 'Música de la invitación';
-        playerFrame.allow = 'autoplay; encrypted-media; picture-in-picture';
-        playerFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&controls=0&loop=1&playlist=${videoId}&playsinline=1&enablejsapi=1&rel=0`;
-        document.getElementById('youtubeAudio').appendChild(playerFrame);
-        playing = true;
         updateMusicButton();
       }
       function updateMusicButton(){
@@ -180,12 +173,14 @@
         opened = true;
         showData();
       });
-      musicButton.addEventListener('click', () => {
-        if (!playerFrame) { startMusicFromTap(); return; }
-        const command = playing ? 'pauseVideo' : 'playVideo';
-        playerFrame.contentWindow?.postMessage(JSON.stringify({event:'command',func:command,args:[]}), '*');
-        playing = !playing;
-        updateMusicButton();
+      musicButton.addEventListener('click', async () => {
+        if (invitationAudio.paused) {
+          await startMusicFromTap();
+        } else {
+          invitationAudio.pause();
+          playing = false;
+          updateMusicButton();
+        }
       });
       backButton.addEventListener('click', () => {
         playPageTransition();

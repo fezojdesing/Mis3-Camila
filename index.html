@@ -66,13 +66,13 @@
     /* Corazones flotantes en morado, rosa y dorado: reemplazan el bokeh circular. */
     .heart-float{position:absolute;display:block;font-style:normal;line-height:1;color:var(--heart-color,#d99ab9);font-size:clamp(22px,5vw,42px);opacity:0;text-shadow:0 0 7px currentColor,0 0 19px currentColor,0 2px 5px #160d25;filter:drop-shadow(0 0 5px currentColor);animation:heartDrift 13s ease-in-out infinite}
     .heart-float::before{content:"♥"}
-    .heart-float:nth-child(7){--heart-color:#b995e6;left:8%;top:19%;font-size:35px;animation-delay:-2s}
-    .heart-float:nth-child(8){--heart-color:#e6a0c3;left:79%;top:14%;font-size:24px;animation-delay:-7s}
-    .heart-float:nth-child(9){--heart-color:#dfbd79;right:7%;top:48%;font-size:42px;animation-delay:-4s}
-    .heart-float:nth-child(10){--heart-color:#d98bb4;left:17%;top:70%;font-size:29px;animation-delay:-9s}
-    .heart-float:nth-child(11){--heart-color:#c5a0e9;right:23%;top:78%;font-size:21px;animation-delay:-5s}
-    .heart-float:nth-child(12){--heart-color:#e1bd7e;left:43%;top:39%;font-size:33px;animation-delay:-11s}
-    @keyframes heartDrift{0%,100%{opacity:0;transform:translate3d(0,18px,0) scale(.72) rotate(-12deg)}22%,72%{opacity:.62}48%{opacity:.3;transform:translate3d(12px,-24px,0) scale(1.12) rotate(10deg)}}
+    .heart-float:nth-child(7){--heart-color:#b995e6;left:8%;top:19%;font-size:42px;animation-delay:-2s}
+    .heart-float:nth-child(8){--heart-color:#e6a0c3;left:79%;top:14%;font-size:30px;animation-delay:-7s}
+    .heart-float:nth-child(9){--heart-color:#dfbd79;right:7%;top:48%;font-size:50px;animation-delay:-4s}
+    .heart-float:nth-child(10){--heart-color:#d98bb4;left:17%;top:70%;font-size:36px;animation-delay:-9s}
+    .heart-float:nth-child(11){--heart-color:#c5a0e9;right:23%;top:78%;font-size:27px;animation-delay:-5s}
+    .heart-float:nth-child(12){--heart-color:#e1bd7e;left:43%;top:39%;font-size:40px;animation-delay:-11s}
+    @keyframes heartDrift{0%,100%{opacity:0;transform:translate3d(0,18px,0) scale(.72) rotate(-12deg)}22%,72%{opacity:.72}48%{opacity:.3;transform:translate3d(12px,-24px,0) scale(1.12) rotate(10deg)}}
     .page-transition{position:fixed;inset:0;z-index:15;pointer-events:none;opacity:0;background:radial-gradient(circle at 50% 50%,rgba(255,222,230,.34),transparent 38%),radial-gradient(circle at 22% 28%,rgba(208,165,225,.25),transparent 24%),radial-gradient(circle at 78% 70%,rgba(226,190,126,.22),transparent 28%)}
     .page-transition::before,.page-transition::after{content:"✧  ·  ✦  ·  ✧";position:absolute;left:50%;top:50%;color:#fff0c5;text-shadow:0 0 12px #e9c76d,0 0 28px #e9c76d;font-size:clamp(24px,7vw,54px);letter-spacing:.5em;white-space:nowrap;transform:translate(-50%,-50%) scale(.65);opacity:0}
     .page-transition::after{content:"·  ✧  ·";color:#c9d9ed;font-size:clamp(18px,5vw,38px);letter-spacing:.8em}

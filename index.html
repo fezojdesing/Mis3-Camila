@@ -42,6 +42,7 @@
     .hotspot:active{transform:scale(.96)}
     /* Coordenadas relativas a cada página: conservan intacta la composición del PDF. */
     .open-hit{left:27%;top:76.5%;width:46%;height:4.4%}
+    .calendar-hit{left:27%;top:81.5%;width:46%;height:4.4%}
     .logo-cover-hit{left:36%;top:87.0%;width:28%;height:4.2%}
     .map-button{position:absolute;z-index:5;left:50%;transform:translateX(-50%);width:30%;min-height:42px;padding:8px 12px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,220,224,.9);border-radius:999px;background:linear-gradient(125deg,rgba(119,78,151,.97),rgba(205,132,169,.97) 56%,rgba(222,184,112,.97));color:#fff8f1;text-decoration:none;font-family:'Marcellus',serif;font-size:clamp(12px,3vw,16px);font-weight:500;letter-spacing:.025em;text-shadow:0 1px 3px #4b285c88;box-shadow:0 3px 14px #26142f88,inset 0 1px 0 #fff9;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);transition:transform .25s ease,box-shadow .25s ease,filter .25s ease}
     .map-button:hover,.map-button:focus-visible{transform:translateX(-50%) translateY(-2px) scale(1.045);box-shadow:0 6px 22px #d58abbaa,inset 0 1px 0 #fff;filter:brightness(1.07);outline:none}
@@ -111,6 +112,7 @@
       <div class="page" id="coverPage">
         <img class="page-art" src="portada_1.jpg" alt="Portada de la invitación de los 3 añitos de Camila Cruzalta Popoca">
         <button class="hotspot open-hit" id="openInvitation" aria-label="Toca para abrir la invitación"></button>
+        <a class="hotspot calendar-hit" href="agendar-evento.ics" aria-label="Agendar evento de Camila en el calendario" title="Agendar evento"></a>
         <a class="hotspot logo-cover-hit" href="https://fezojdesing.github.io/fezoj_studio/" target="_blank" rel="noopener" aria-label="Visitar Fezoj Studio"></a>
       </div>
     </section>

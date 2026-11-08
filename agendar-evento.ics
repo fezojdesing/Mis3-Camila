@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Fezoj Studio//Invitacion Camila//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:camila-cruzalta-popoca-20270102T140000-fezoj@fezojdesing.github.io
+DTSTAMP:20261107T120000Z
+DTSTART:20270102T200000Z
+SUMMARY:3 añitos de Camila Cruzalta Popoca
+LOCATION:Almoloya de Alquisiras\, Estado de México
+DESCRIPTION:Celebración de los 3 añitos de Camila Cruzalta Popoca.\nCeremonia: Parroquia de San Pedro Apóstol.\nRecepción: El Vivero\, Almoloya de Alquisiras\, Estado de México.
+END:VEVENT
+END:VCALENDAR

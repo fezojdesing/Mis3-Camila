@@ -168,6 +168,18 @@
         }
         updateMusicButton();
       }
+
+      // Detiene la música cuando el usuario abandona la página o cambia de pestaña.
+      // No interfiere con el inicio de música al tocar «Abrir invitación».
+      function stopMusicOnExit(){
+        invitationAudio.pause();
+        playing = false;
+        updateMusicButton();
+      }
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') stopMusicOnExit();
+      });
+      window.addEventListener('pagehide', stopMusicOnExit);
       function updateMusicButton(){
         musicButton.textContent = playing ? 'Pausar música' : 'Reproducir música';
         musicButton.setAttribute('aria-label', playing ? 'Pausar música' : 'Reproducir música');

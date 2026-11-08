@@ -44,12 +44,16 @@
     .open-hit{left:27%;top:76.5%;width:46%;height:4.4%}
     .calendar-hit{left:27%;top:81.5%;width:46%;height:4.4%}
     .logo-cover-hit{left:36%;top:87.0%;width:28%;height:4.2%}
-    .map-button{position:absolute;z-index:5;left:50%;transform:translateX(-50%);width:30%;min-height:42px;padding:8px 12px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,220,224,.9);border-radius:999px;background:linear-gradient(125deg,rgba(119,78,151,.97),rgba(205,132,169,.97) 56%,rgba(222,184,112,.97));color:#fff8f1;text-decoration:none;font-family:'Marcellus',serif;font-size:clamp(12px,3vw,16px);font-weight:500;letter-spacing:.025em;text-shadow:0 1px 3px #4b285c88;box-shadow:0 3px 14px #26142f88,inset 0 1px 0 #fff9;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);transition:transform .25s ease,box-shadow .25s ease,filter .25s ease}
-    .map-button:hover,.map-button:focus-visible{transform:translateX(-50%) translateY(-2px) scale(1.045);box-shadow:0 6px 22px #d58abbaa,inset 0 1px 0 #fff;filter:brightness(1.07);outline:none}
-    .map-button:active{transform:translateX(-50%) scale(.97)}
-    .map-ceremony-hit{top:52.1%}
-    .map-reception-hit{top:64.4%}
-    @media(max-width:380px){.map-button{width:34%;min-height:39px;padding:7px 8px;font-size:13px;letter-spacing:.01em}}
+
+
+
+
+
+
+    /* Zonas transparentes alineadas con los botones que forman parte de datos_1.jpg. */
+    .map-hotspot{left:32%;width:36%;height:2.2%;z-index:7}
+    .map-ceremony-hit{top:52.3%}
+    .map-reception-hit{top:64.3%}
     .logo-data-hit{left:37%;top:90.5%;width:26%;height:3.8%}
     .quote-button{position:absolute;z-index:6;left:50%;top:96.2%;transform:translateX(-50%);width:52%;max-width:290px;min-height:34px;padding:8px 14px;font-size:clamp(10px,2.6vw,15px);letter-spacing:.055em;border:1px solid rgba(255,222,220,.95);border-radius:999px;color:#fff8f2;text-decoration:none;background:linear-gradient(125deg,rgba(111,72,145,.98),rgba(198,119,161,.98) 58%,rgba(218,177,107,.98));text-shadow:0 1px 3px #4b285c88;box-shadow:0 4px 16px #26142f88,inset 0 1px 0 #fff9;text-align:center;white-space:nowrap}
     .quote-button:hover,.quote-button:focus-visible{transform:translateX(-50%) translateY(-2px) scale(1.035);box-shadow:0 7px 22px #d58abbaa;filter:brightness(1.08);outline:none}
@@ -129,8 +133,8 @@
               <div class="time-unit"><span class="time-number" id="seconds">00</span><span class="time-caption">Segundos</span></div>
             </div>
           </div>
-          <a class="map-button map-ceremony-hit" href="https://www.google.com/maps/search/?api=1&query=Parroquia+de+San+Pedro+Ap%C3%B3stol+Almoloya+de+Alquisiras+Estado+de+M%C3%A9xico" target="_blank" rel="noopener" aria-label="Ver ubicación de la ceremonia">VER UBICACIÓN</a>
-          <a class="map-button map-reception-hit" href="https://www.google.com/maps/search/?api=1&query=El+Vivero+Almoloya+de+Alquisiras+Estado+de+M%C3%A9xico" target="_blank" rel="noopener" aria-label="Ver ubicación de la recepción">VER UBICACIÓN</a>
+          <a class="hotspot map-hotspot map-ceremony-hit" href="https://www.google.com/maps/search/?api=1&query=Parroquia+de+San+Pedro+Ap%C3%B3stol+Almoloya+de+Alquisiras+Estado+de+M%C3%A9xico" target="_blank" rel="noopener" aria-label="Ver ubicación de la ceremonia"></a>
+          <a class="hotspot map-hotspot map-reception-hit" href="https://www.google.com/maps/search/?api=1&query=El+Vivero+Almoloya+de+Alquisiras+Estado+de+M%C3%A9xico" target="_blank" rel="noopener" aria-label="Ver ubicación de la recepción"></a>
           <a class="hotspot logo-data-hit" href="https://fezojdesing.github.io/fezoj_studio/" target="_blank" rel="noopener" aria-label="Visitar Fezoj Studio"></a>
           <a class="quote-button" href="https://fezojdesing.github.io/fezoj_studio/contacto.html" target="_blank" rel="noopener">COTIZA TU INVITACIÓN</a>
         </div>
